@@ -1,0 +1,105 @@
+<header>
+  <nav id="desktop-nav">
+    <div class="logo"><h3>Frog Game</h3></div>
+    <div>
+      <ul class="nav-links">
+        <li><a href="#Game">Game</a></li>
+        <li><a href="#Score">Score</a></li>
+        <li><a href="#Contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+<body class="frameContainer">
+  <section id="Game">
+    <div class="GameContainer">
+      <h3 id="Game1">Can you guess in which box the frog is?</h3>
+      <p class="m-0" style="font-size: large; color: red">
+        <b>Score :</b> {{ this.score }}
+      </p>
+
+      <br />
+      <div class="GameBox">
+        <div *ngFor="let value of values">
+          <div
+            class="frogBox"
+            *ngIf="value"
+            role="button"
+            (click)="this.correct()"
+          >
+            <img src="./Box_1.png" class="icon_1" id="frogImg2" />
+            <img src="./frog.png" class="icon" id="frogImg" />
+          </div>
+          <div
+            class="frogBox"
+            *ngIf="!value"
+            role="button"
+            (click)="this.wrong()"
+          >
+            <img src="./Box_1.png" class="icon_1" id="wrong" />
+            <img src="./wrong.png" class="icon" id="wrong"/>
+          </div>
+        </div>
+      </div>
+      <div *ngIf="this.message">
+        <button class="btn btn-warning" (click)="this.start()">
+          Start the game
+        </button>
+      </div>
+    </div>
+  </section>
+  <section id="Score">
+    <div class="scoreBoard">
+      <h2 class="display-4">Score Board</h2>
+      <h3><b>High Score :</b> {{ this.HighScore }}</h3>
+      <h3><b>Score :</b> {{ this.score }}</h3>
+    </div>
+  </section>
+  <section id="Contact">
+    <img src="./FFAU9533.JPG" alt="My image" class="MyImage shadow-lg" />
+    <p class="section__text__p1" style="color: green">Get in Touch</p>
+    <h1 class="title" style="color: green">Contact Me</h1>
+    <div class="contact-info-upper-container">
+      <div class="contact-info-container">
+        <img
+          src="./public/email.png"
+          alt="Email icon"
+          class="icon contact-icon email-icon"
+        />
+        <p class="m-0">
+          <a href="mailto:karthikmudike0702@gmail.com"
+            style="color: green;">karthikmudike0702&#64;gmail.com</a
+          >
+        </p>
+      </div>
+      <div class="contact-info-container">
+        <img
+          src="./public/linkedin.png"
+          alt="LinkedIn icon"
+          class="icon contact-icon"
+        />
+        <p class="m-0">
+          <a
+            href="https://www.linkedin.com/in/
+    karthik-720132322"
+    style="color: green;">LinkedIn</a
+          >
+        </p>
+      </div>
+      <div class="contact-info-container">
+        <img
+          src="./public/world.png"
+          alt="Email icon"
+          class="icon contact-icon"
+        />
+        <p class="m-0">
+          <a href="https://karthikmudike.github.io/My-Portfolio/"
+          style="color: green;">My Website</a>
+        </p>
+      </div>
+    </div>
+    <footer>
+      <p class="m-0">Copyright &#169; 2025 Karthik M. All Rights Reserved.</p>
+    </footer>
+  </section>
+</body>
