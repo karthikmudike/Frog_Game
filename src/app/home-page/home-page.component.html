@@ -24,6 +24,7 @@
             *ngIf="value"
             role="button"
             (click)="this.correct()"
+            (touchend)="this.correct()"
           >
             <img src="./Box_1.png" class="icon_1" id="frogImg2" />
             <img src="./frog.png" class="icon" id="frogImg" />
@@ -33,6 +34,7 @@
             *ngIf="!value"
             role="button"
             (click)="this.wrong()"
+            (touchend)="this.wrong()"
           >
             <img src="./Box_1.png" class="icon_1" id="wrong" />
             <img src="./wrong.png" class="icon" id="wrong"/>
@@ -40,7 +42,7 @@
         </div>
       </div>
       <div *ngIf="this.message">
-        <button class="btn btn-warning" (click)="this.start()">
+        <button class="btn btn-warning m-3" (click)="this.start()">
           Start the game
         </button>
       </div>

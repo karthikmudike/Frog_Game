@@ -311,6 +311,7 @@ footer{
     .scoreBoard
     {
       min-width: 85vw;
+      min-height: 50vh;
     }
 
     .scoreGa{

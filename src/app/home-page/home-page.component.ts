@@ -23,10 +23,15 @@ export class HomePageComponent{
     this.values[this.index] = true;
     let x = document.getElementById('frogImg');
     let y = document.getElementById('frogImg2');
+    let z = document.getElementById('Game1');
       if(x&&y)
       {
         x.style.display = 'none';
         y.style.display = 'block';
+      }
+      if(z)
+      {
+        z.textContent = 'Can you guess in which box the frog is?';
       }
   }
 
