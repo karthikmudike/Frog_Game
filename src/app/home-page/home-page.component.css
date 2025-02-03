@@ -88,7 +88,6 @@ body{
 {
     padding: 1rem;
     min-width: 70%;
-    min-height: 65vh;
     border-radius: 15px;
     display: flex;
     flex-direction: row;
@@ -160,7 +159,6 @@ body{
 
 .scoreBoard
 {
-  margin: 2rem;
   min-width: 90vw;
   background-color: white;
   color: green;
@@ -235,4 +233,87 @@ footer{
     padding: 15px;
     color: green;
     text-align: center;
+}
+
+
+@media screen and (max-width: 600px) {
+
+  main
+  {
+    min-width: 380px;
+  }
+
+  .frogBox
+  {
+    width: 50px; 
+    height: 50px;
+  }
+
+  #frogImg, #frogImg_2, #wrong, .icon_1
+    {
+      height: 40px;
+      width: 40px;
+    }
+
+    .MyImage
+    {
+      width: 150px;
+      height: 150px;
+      margin: 20px;
+      border-radius: 100%;
+      border: .1rem solid rgb(255, 255, 255);
+    }
+
+    h3, a
+    {
+      font-size: medium;
+    }
+
+    h2
+    {
+      font-size: xx-large;
+    }
+
+    .header{
+     padding: 5px;;
+    }
+
+    .logo {
+      display: none;
+    }
+
+    .GameContainer
+    {
+      margin: 0rem;
+      width: 90vw;
+      text-align: center;
+      height: 100%;
+    }
+    .GameBox
+    {
+      margin: 0px;
+      padding: 0px;
+      gap: 0;
+    }
+
+    section
+    {
+      min-height: 50vh;
+      min-width: 70vw;
+    }
+
+    .contact-info-upper-container
+    {
+      flex-direction: column;
+      min-width: 70vw;
+    }
+
+    .scoreBoard
+    {
+      min-width: 85vw;
+    }
+
+    .scoreGa{
+      font-size: small;
+    }
 }

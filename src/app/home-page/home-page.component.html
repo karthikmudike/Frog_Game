@@ -14,11 +14,9 @@
   <section id="Game">
     <div class="GameContainer">
       <h3 id="Game1">Can you guess in which box the frog is?</h3>
-      <p class="m-0" style="font-size: large; color: red">
-        <b>Score :</b> {{ this.score }}
+      <p class="m-0 scoreGa" style="color: red">
+        <b>Game Score :</b> {{ this.score }}
       </p>
-
-      <br />
       <div class="GameBox">
         <div *ngFor="let value of values">
           <div
@@ -52,7 +50,7 @@
     <div class="scoreBoard">
       <h2 class="display-4">Score Board</h2>
       <h3><b>High Score :</b> {{ this.HighScore }}</h3>
-      <h3><b>Score :</b> {{ this.score }}</h3>
+      <h3><b>Game Score :</b> {{ this.score }}</h3>
     </div>
   </section>
   <section id="Contact">
